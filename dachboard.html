@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dachboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+  <aside class="container">
+    <div class="first-info">
+     <img src="OIP.jpg" alt="" class="logo-first">
+        <h3 class="title-1">Brand home</h3>
+    </div>
+    <br>
+ <h3 class="title-f">Main navigation</h3>
+ <div class="nav-links">
+  <ul>
+    <li><a href="dachboard.html"><i class="fa-solid fa-house"></i> <span>Dachboard</span></a></li>
+    <br>
+    <li><a href="dachboard.html"><i class="fa-sharp fa-solid fa-user-tie"></i><span>users</span></a></li>
+    <br>
+    <li><a href="dachboard.html"><i class="fa-solid fa-users"></i><span>form</span></a></li>
+    <br>
+    <li><a href="dachboard.html"><i class="fa-solid fa-table"></i><span>table</span></a></li>
+  </ul>
+ </div>
+<div class="user-area-title">
+  <h3 class="title-5">user area</h3>
+  <div class="nav-links-2">
+    <ul>
+      <li><a href="dachboard.html"><i class="fa-solid fa-user"></i><span>profile</span><i class="fa-sharp fa-solid fa-caret-down"></i></a></li>
+      <br>
+      <li><a href="dachboard.html"><i class="fa-brands fa-instagram"></i><span>instaram</span></a></li>
+    <br>
+      <li><a href="dachboard.html"><i class="fa-brands fa-github"></i><span>github</span></a></li>
+     <br>
+      <li><a href="dachboard.html"><i class="fa-brands fa-facebook"></i><span>facebook</span></a></li>
+    </ul>
+  </div>
+  <div class="nav-links-3">
+    <ul>
+      <li><a href="dachboard.html"><i class="fa-solid fa-gear"></i><span>settings</span></a></li>
+      <br>
+      <li><a href="dachboard.html"><i class="fa-sharp fa-solid fa-right-from-bracket"></i><span>log out</span></a></li>
+    </ul>
+  </div>
+</div>
+</aside>
+<div class="description">
+  <h3 class="title-sd">Dachboard</h3>
+  <div class="search-box">
+    <input type="search" placeholder="search..">
+    <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+</div>
+<div class="description-2">
+  <h4 class="workset">workset</h4>
+  <p class="some-description-info">workset,back with taha</p>
+</div>
+<div class="container-4">
+  <div class="first-container active">
+    <img src="OIP (2).jpg" class="logo-bit">
+    <div class="some-info-about-bit">
+       <h3 class="number-of-users">5000,000 <br>new users</h3>
+      <button class="first-btn-a">read more</button>
+    </div>
+  </div>
+  <br>
+  <div class="first-container active-1">
+    <img src="download.jpg" alt="" class="logo-bit">
+    <div class="some-info-about-bit">
+      <h3 class="number-of-users">52,000 <br> new users</h3>
+      <button class="first-btn-b">read more</button>
+    </div>
+  </div>
+  <br>
+  <div class="first-container active-2">
+    <img src="download (1).jpg" alt="" class="logo-bit">
+    <div class="some-info-about-bit">
+      <h3 class="number-of-users">5,000 <br>new users</h3>
+      <button class="first-btn-c">read more</button>
+  </div>
+  </div>
+
+</div>
+<div class="container-sa">
+<div class="statistiques-container">
+  <h3 class="stat">statistiques</h3>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>customer</th>
+      <th>price</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>taha</td>
+      <td>200$</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>mhamd</td>
+      <td>400$</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>ahmad</td>
+      <td>500$</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>ilie</td>
+      <td>700$</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>joe</td>
+      <td>1000$</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>jad</td>
+      <td>price</td>
+    </tr>
+ 
+  </table>
+</div>
+<div class="another-statistiques">
+  <div id="donutchart" ></div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  }
+</script>
+ 
+</html>
